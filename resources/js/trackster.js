@@ -2,10 +2,6 @@ var Trackster = {};
 const API_KEY = "40f13d2f0721f3e75a883099fcdd8243";
 
 $(document).ready( function(){ 
-  Trackster.onLoad();
-})
-
-Trackster.onLoad = function() {
   $("input").click( function() {
     $(this).attr("value","");
   });
@@ -23,12 +19,14 @@ Trackster.onLoad = function() {
       Trackster.searchTracksByTitle($("input[name='search']").val());
     }
   });
-}
+})
+
 /*
   Given an array of track data, create the HTML for a Bootstrap row for each.
   Append each "row" to the container in the body to display all tracks. 
 */
 Trackster.renderTracks = function(tracks) {
+  $("#results").empty();
 	for (track in tracks) {
     var listeners = tracks[track].listeners;
     listeners = Number(listeners).toLocaleString();
@@ -41,10 +39,8 @@ Trackster.renderTracks = function(tracks) {
         '<div class="col-xs-1">3:35</div>'+
       '</div>'+
       '<div class="divider"></div>';
-
 		$("#results").append(song);
 	}
-  Trackster.onLoad();
 };
 
 /*
@@ -55,7 +51,6 @@ Trackster.searchTracksByTitle = function(title) {
 	$.ajax({url: "http://ws.audioscrobbler.com/2.0/?method=track.search&track="+title+"&api_key="+API_KEY+"&format=json", success: function(result){
 		var tracks = result.results.trackmatches.track;
     Trackster.renderTracks(tracks);
-    Trackster.onLoad();
   }});
 
 };
