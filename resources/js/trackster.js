@@ -27,6 +27,8 @@ $(document).ready( function(){
 */
 Trackster.renderTracks = function(tracks) {
   $("#results").empty();
+  setTimeout(function() {
+
 	for (track in tracks) {
     var listeners = tracks[track].listeners;
     listeners = Number(listeners).toLocaleString();
@@ -41,6 +43,8 @@ Trackster.renderTracks = function(tracks) {
       '<div class="divider"></div>';
 		$("#results").append(song);
 	}
+      $("h1").removeClass("title-animation");
+  },3500);
 };
 
 /*
@@ -48,6 +52,7 @@ Trackster.renderTracks = function(tracks) {
   Render the tracks given in the API query response.
 */
 Trackster.searchTracksByTitle = function(title) {
+  $("h1").addClass("title-animation");
 	$.ajax({url: "http://ws.audioscrobbler.com/2.0/?method=track.search&track="+title+"&api_key="+API_KEY+"&format=json", success: function(result){
 		var tracks = result.results.trackmatches.track;
     Trackster.renderTracks(tracks);

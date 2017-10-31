@@ -28,6 +28,21 @@ h1{
 	right: 7vw;
 }
 
+.title-animation {
+	animation: huge 2s linear alternate infinite;
+}
+
+@keyframes huge {
+	from {}
+	to {
+
+		z-index: 1;
+		font-size: 20rem;
+		color: red;
+		text-shadow: -2rem -2rem;
+	}
+}
+
 a {
 	color: rgb(255,0,171);
 }
