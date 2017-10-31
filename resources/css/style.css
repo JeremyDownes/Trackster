@@ -1,0 +1,140 @@
+html {
+	font-size: 1.17vw;
+	box-sizing: border-box;
+}
+
+html * {
+	font-size: 1rem;
+}
+
+body{
+	margin:0;
+}
+
+header {
+	background-color: rgb(35,2,63);
+}
+
+header div {
+	padding: 0;
+}
+
+h1{
+	font: 2.5rem Righteous;
+	color: rgb(255,0,171);
+	margin: 0;
+	padding: 1rem;
+	position: relative;
+	right: 7vw;
+}
+
+a {
+	color: rgb(255,0,171);
+}
+
+.button i {
+	background-color: rgb(255,0,171);
+	border-radius: 1rem;
+	transform: rotateY(180deg);
+	padding: .4rem 1rem;
+	font-size: 1.5rem;
+	position: relative;
+	right: 3vw;
+}
+
+.play i {
+	font-size: 1.5rem;
+}
+
+.container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.text-container {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	flex-shrink: none;
+}
+
+input {
+	width: 120%;
+	border-radius: 1rem;
+	padding-left: 1rem;
+
+}
+
+input:focus {
+	outline: none;
+
+}
+
+span{
+	margin: 0;
+	color: white;
+	position: absolute;
+	right: 2vw;
+	color: black;
+	border-left: 1px solid lightgray;
+	padding: .35vw;
+	background-color: white;
+	border-bottom-right-radius: 50%;
+	border-top-right-radius: 50%;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.purple {
+	background-color: purple;
+	color: white;
+	padding: .5rem 0;
+	margin: 0;
+}
+
+.purple div {
+	padding: 0;
+}
+
+.results div {
+	padding: .75vw 0;
+	font-size: 1rem;
+}
+
+.divider {
+	height: 1px;
+	width: 100%;
+	background-color: rgb(204,204,204);
+}
+
+.results:hover {
+	background-color: rgb(239,237,242);
+}
+
+.row > :first-child {
+	margin-left: 3rem;
+}
+
+.row > :last-child {
+	margin-right: 3rem;
+}
+
+.row * {
+	display: flex;
+	align-items: center;
+}
+
+label {
+	margin-right: 2rem;
+}
+
+img {
+	height: 2.5rem;
+}
