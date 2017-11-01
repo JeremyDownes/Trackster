@@ -29,7 +29,7 @@ h1{
 }
 
 .title-animation {
-	animation: huge 2s linear alternate infinite;
+	animation: huge 1s linear alternate infinite;
 }
 
 @keyframes huge {
@@ -37,9 +37,9 @@ h1{
 	to {
 
 		z-index: 1;
-		font-size: 20rem;
+		font-size: 18rem;
 		color: red;
-		text-shadow: -2rem -2rem;
+		text-shadow: -2rem -2rem purple;
 	}
 }
 
@@ -48,13 +48,18 @@ a {
 }
 
 .button i {
-	background-color: rgb(255,0,171);
+	background-color: rgb(255,102,204);
 	border-radius: 1rem;
 	transform: rotateY(180deg);
 	padding: .4rem 1rem;
 	font-size: 1.5rem;
 	position: relative;
 	right: 3vw;
+}
+
+.button i:hover {
+	cursor: pointer;
+	background-color: rgb(255,0,171);
 }
 
 .play i {
@@ -78,6 +83,7 @@ input {
 	width: 120%;
 	border-radius: 1rem;
 	padding-left: 1rem;
+	padding-right: 1.5rem;
 
 }
 
@@ -91,12 +97,16 @@ span{
 	color: white;
 	position: absolute;
 	right: 2vw;
-	color: black;
+	color: purple;
 	border-left: 1px solid lightgray;
 	padding: .35vw;
 	background-color: white;
 	border-bottom-right-radius: 50%;
 	border-top-right-radius: 50%;
+}
+
+span:hover {
+	cursor: pointer;
 }
 
 .row {
@@ -152,4 +162,8 @@ label {
 
 img {
 	height: 2.5rem;
+}
+
+#name:hover,#artist:hover,#listeners:hover,#length:hover {
+	cursor: pointer;
 }
