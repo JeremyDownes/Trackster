@@ -74,7 +74,7 @@ Trackster.sortResults = function(results, order) {
 */
 Trackster.searchTracksByTitle = function(title) {
   $("h1").addClass("title-animation");
-	$.ajax({url: "http://ws.audioscrobbler.com/2.0/?method=track.search&track="+title+"&api_key="+API_KEY+"&format=json", success: function(result){
+	$.ajax({url: "https://ws.audioscrobbler.com/2.0/?method=track.search&track="+title+"&api_key="+API_KEY+"&format=json", success: function(result){
 		var tracks = result.results.trackmatches.track;
     for (track in tracks) {
       tracks[track].imageUrl = tracks[track].image[0]["#text"];
